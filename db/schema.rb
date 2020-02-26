@@ -10,9 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200224041237) do
+ActiveRecord::Schema.define(version: 20200226074704) do
 
   create_table "fashions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "story",      limit: 65535
+    t.string   "url"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "story",      limit: 65535
+    t.string   "url"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "musics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "story",      limit: 65535
+    t.string   "url"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
     t.string   "title"
     t.text     "story",      limit: 65535
@@ -31,6 +58,15 @@ ActiveRecord::Schema.define(version: 20200224041237) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "story",      limit: 65535
+    t.string   "url"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

@@ -1,17 +1,17 @@
 <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand">My Five Star</a>
   <form class="form-inline">
-    <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="fashions/new">Add</a>
+    <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="foods/new">Add</a>
     <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="/">Back</a>
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
   </form>
 </nav>
 
-<% @fashions.each do |fashion| %>
- <%= link_to fashion do %>
+<% @foods.each do |food| %>
+ <%= link_to food do %>
  <div class="container" style="background-color:black;">
     <%= image_tag 'star2.png'%>
-    <h2><%= fashion.title %></h2>
+    <h2><%= food.title %></h2>
  </div>
  <% end %>
 <% end %>

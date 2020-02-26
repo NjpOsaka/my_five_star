@@ -29,4 +29,3 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:title, :story, :url, :image)
   end
 end
-end
