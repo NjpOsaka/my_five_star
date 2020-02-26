@@ -1,0 +1,44 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">My Five Star</a>
+  <form class="form-inline">
+    
+    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+</nav>
+
+ <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4 shadow-sm">
+            <%= image_tag 'sample.jpg', class: 'img-fluid' %>
+            <div class="card-body">
+
+
+               <%= form_for @fashion do |f| %>
+                <div class="form-group">
+                 <%= f.label :title, 'Title'%>
+                 <%= f.text_field :title, class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                 <%= f.label :story, 'Story'%>
+                 <%= f.text_field :story, class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                 <%= f.label :url, 'URL'%>
+                 <%= f.text_field :url, class: 'form-control'%>
+                </div>
+               
+                <div class="form-group">
+                 <%= f.label :image, 'Image'%>
+                 <%= f.file_field :image, class: 'form-control'%>
+                </div>
+                
+                <%= f.submit 'Upload', class: 'btn btn-outline-secondary'%>
+               <% end %>
+
+
+
+            </div>
+          </div>
+        </div>
+
