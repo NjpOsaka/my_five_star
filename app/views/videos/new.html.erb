@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand">My Five Star</a>
   <form class="form-inline">
-    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Logout</button>
-     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
+    <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="/">Back</a>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
   </form>
 </nav>
 
@@ -14,19 +14,19 @@
             <div class="card-body">
                <%= form_for @video do |f| %>
                 <div class="form-group">
-                 <%= f.label :title, 'Title'%>
+                 <%= f.label :title, 'What is the title of this?'%>
                  <%= f.text_field :title, class: 'form-control'%>
                 </div>
                 <div class="form-group">
-                 <%= f.label :story, 'Story'%>
+                 <%= f.label :story, 'What is the story about this?'%>
                  <%= f.text_field :story, class: 'form-control'%>
                 </div>
                 <div class="form-group">
-                 <%= f.label :url, 'URL'%>
+                 <%= f.label :url, 'Post it if you have a URL.'%>
                  <%= f.text_field :url, class: 'form-control'%>
                 </div>
                 <div class="form-group">
-                 <%= f.label :image, 'Image'%>
+                 <%= f.label :image, 'Images are the most important!'%>
                  <%= f.file_field :image, class: 'form-control'%>
                 </div>
                 <%= f.submit 'Upload', class: 'btn btn-outline-secondary'%>
