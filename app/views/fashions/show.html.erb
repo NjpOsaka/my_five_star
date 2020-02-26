@@ -1,20 +1,20 @@
 <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand">My Five Star</a>
   <form class="form-inline">
-    
+    <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="/">Back</a>
     <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Logout</button>
   </form>
 </nav>
 
- <div class="container mt-5">
-      <div class="row">
+ <div class="container mt-5 ">
         <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <img src="#" class="img-fluid" %>
-            <div class="card-body">
-              <h3 class="card-title"> <%= @fashion.title %> </h3>
-              <p class="card-story"><%= @fashion.story %></p>
+              <img src = <%= @fashion.image %> >
+              <h3 class="card-title mt-4"> Title : <%= @fashion.title %> </h3>
+              <h4 class="card-story mt-5">Story : <%= @fashion.story %></h4>
+              <h5 class="card-url mt-5">URL : <%= @fashion.url %></h5>
             </div>
           </div>
         </div>
+      </div>
 

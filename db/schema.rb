@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20200224041237) do
 
   create_table "fashions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.binary   "image",      limit: 65535
+    t.string   "image"
     t.string   "title"
     t.text     "story",      limit: 65535
     t.string   "url"

@@ -13,8 +13,7 @@ class FashionsController < ApplicationController
   end
 
   def create
-    @fashion = Fashion.new(fashion_params)
-    @fashion.save
+    Fashion.create(fashion_params)
     redirect_to root_path
   end
 
@@ -28,6 +27,6 @@ class FashionsController < ApplicationController
   
 
   def fashion_params
-    params.require(:fashion).permit(:title, :story, :url)
+    params.require(:fashion).permit(:title, :story, :url, :image)
   end
 end

@@ -59,3 +59,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'pry-rails'
+
+gem "fog-aws"
+gem "asset_sync"
+gem 'fog-xenserver'
