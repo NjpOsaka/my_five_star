@@ -7,11 +7,13 @@
   </form>
 </nav>
 
-<% @fashions.each do |fashion| %>
- <%= link_to fashion do %>
- <div class="container" style="background-color:black;">
-    <%= image_tag 'star2.png'%>
-    <h2><%= fashion.title %></h2>
- </div>
+<div class="container col-md-4" style="background-color:black;">
+ <% @fashions.each do |fashion| %>
+  <%= link_to fashion do %>
+  <div class="container" style="background-color:black;">
+     <%= image_tag 'star2.png'%>
+     <h2 class= "text-center"><%= fashion.title %></h2>
+  </div>
  <% end %>
-<% end %>
+ <% end %>
+ </div>

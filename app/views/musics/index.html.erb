@@ -7,11 +7,13 @@
   </form>
 </nav>
 
-<% @musics.each do |music| %>
- <%= link_to music do %>
- <div class="container" style="background-color:black;">
-    <%= image_tag 'star2.png'%>
-    <h2><%= music.title %></h2>
- </div>
+<div class="container col-md-4" style="background-color:black;">
+ <% @musics.each do |music| %>
+  <%= link_to music do %>
+  <div class="container" style="background-color:black;">
+     <%= image_tag 'star2.png'%>
+     <h2 class= "text-center"><%= music.title %></h2>
+  </div>
  <% end %>
-<% end %>
+ <% end %>
+ </div>

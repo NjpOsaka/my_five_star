@@ -2,6 +2,7 @@
   <a class="navbar-brand">My Five Star</a>
   <form class="form-inline">
     <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="/">Back</a>
+    <%= link_to 'Delete', "#{@fashion.id}", method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
   </form>
 </nav>
@@ -10,9 +11,9 @@
         <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
               <img src = <%= @fashion.image %> >
-              <h3 class="card-title mt-4"> Title : <%= @fashion.title %> </h3>
-              <h4 class="card-story mt-5">Story : <%= @fashion.story %></h4>
-              <h5 class="card-url mt-5">URL : <%= @fashion.url %></h5>
+              <h3 class="card-title mt-3"> Title : <%= @fashion.title %> </h3>
+              <h4 class="card-story mt-3">Story : <%= @fashion.story %></h4>
+              <h5 class="card-url mt-3">URL : <%= @fashion.url %></h5>
             </div>
           </div>
         </div>
