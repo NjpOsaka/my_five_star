@@ -2,6 +2,7 @@
   <a class="navbar-brand">My Five Star</a>
   <form class="form-inline">
     <a class="btn btn-outline-secondary my-2 my-sm-0 mr-1" type="submit", href="/">Back</a>
+    <%= link_to 'Delete', "#{@fashion.id}", method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary my-2 my-sm-0" %>
   </form>
 </nav>

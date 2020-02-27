@@ -21,11 +21,12 @@ class FashionsController < ApplicationController
   end
 
   def destroy
+    fashion = Fashion.find(params[:id])
+    fashion.destroy
+    redirect_to root_path
   end
 
   private
-  
-
   def fashion_params
     params.require(:fashion).permit(:title, :story, :url, :image)
   end
